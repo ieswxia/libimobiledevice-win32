@@ -11,13 +11,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="libusbmuxd.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="sock_stuff.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="utils.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

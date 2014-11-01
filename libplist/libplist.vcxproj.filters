@@ -73,16 +73,7 @@
     <ClCompile Include="src\Array.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\base64.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Boolean.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\bplist.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\bytearray.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Data.cpp">
@@ -94,9 +85,6 @@
     <ClCompile Include="src\Dictionary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\hashtable.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Integer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -106,12 +94,6 @@
     <ClCompile Include="src\Node.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\plist.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ptrarray.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Real.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -119,6 +101,24 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Structure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bplist.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bytearray.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hashtable.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plist.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ptrarray.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\xplist.c">

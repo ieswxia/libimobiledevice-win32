@@ -175,6 +175,9 @@
     <ClCompile Include="src\misagent.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\mobile_image_mounter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\mobilebackup.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -182,9 +185,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\mobilesync.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\mobile_image_mounter.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\notification_proxy.c">

@@ -150,7 +150,7 @@ int socket_create(uint16_t port)
 #ifdef WIN32
 	WSADATA wsa_data;
 	if (!wsa_init) {
-		if (WSAStartup(MAKEWORD(2,2), &wsa_data) != ERROR_SUCCESS) {
+		if(WSAStartup(MAKEWORD(2,2), &wsa_data) != ERROR_SUCCESS) {
 			fprintf(stderr, "WSAStartup failed!\n");
 			ExitProcess(-1);
 		}

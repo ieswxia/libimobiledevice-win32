@@ -80,42 +80,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\readline\savestring.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\readline\search.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\readline\shell.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\readline\signals.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\readline\terminal.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\readline\text.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\readline\tilde.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\readline\undo.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\readline\util.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\readline\vi_keymap.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\readline\vi_mode.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\readline\xmalloc.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\readline\bind.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -180,6 +144,42 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\readline\rltty.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\readline\savestring.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\readline\search.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\readline\shell.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\readline\signals.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\readline\terminal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\readline\text.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\readline\tilde.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\readline\undo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\readline\util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\readline\vi_keymap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\readline\vi_mode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\readline\xmalloc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

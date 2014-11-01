@@ -16,10 +16,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="libirecovery\src\libirecovery.c">
+    <ClCompile Include="libirecovery\tools\irecovery.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="libirecovery\tools\irecovery.c">
+    <ClCompile Include="libirecovery\src\libirecovery.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

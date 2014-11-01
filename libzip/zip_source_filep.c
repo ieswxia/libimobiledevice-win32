@@ -141,7 +141,7 @@ read_file(void *state, void *data, zip_uint64_t len, enum zip_source_cmd cmd)
 	}
 
 	if (z->closep) {
-	    if (fseeko(z->f, (off_t)z->off, SEEK_SET) < 0) {
+	    if (fseeko(z->f, (long long)z->off, SEEK_SET) < 0) {
 		z->e[0] = ZIP_ER_SEEK;
 		z->e[1] = errno;
 		return -1;
@@ -159,7 +159,7 @@ read_file(void *state, void *data, zip_uint64_t len, enum zip_source_cmd cmd)
 
 	if (!z->closep) {
 	    /* we might share this file with others, so let's be safe */
-	    if (fseeko(z->f, (off_t)(z->off + z->len-z->remain),
+	    if (fseeko(z->f, (long long)(z->off + z->len-z->remain),
 		       SEEK_SET) < 0) {
 		z->e[0] = ZIP_ER_SEEK;
 		z->e[1] = errno;

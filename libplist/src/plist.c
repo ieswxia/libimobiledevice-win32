@@ -276,11 +276,11 @@ void plist_array_set_item(plist_t node, plist_t item, uint32_t n)
         if (old_item)
         {
             int idx = plist_free_node((node_t *)old_item);
-	    if (idx < 0) {
-		node_attach((node_t *)node, (node_t *)item);
-	    } else {
-		node_insert((node_t *)node, idx, (node_t *)item);
-	    }
+			if (idx < 0) {
+				node_attach((node_t *)node, (node_t *)item);
+			} else {
+				node_insert((node_t *)node, idx, (node_t *)item);
+			}
         }
     }
     return;
@@ -411,11 +411,14 @@ void plist_dict_set_item(plist_t node, const char* key, plist_t item)
         if (old_item)
         {
             int idx = plist_free_node(old_item);
-	    if (idx < 0) {
-		node_attach((node_t *)node, (node_t *)item);
-	    } else {
-		node_insert((node_t *)node, idx, (node_t *)item);
-	    }
+			if (idx < 0) {
+				node_attach((node_t *)node, (node_t *)item);
+			} else {
+				node_insert((node_t *)node, idx, (node_t *)item);
+			}
+        } else {
+            node_attach((node_t *)node, (node_t *)(plist_new_key(key)));
+            node_attach((node_t *)node, (node_t *)item);
         }
     }
     return;
@@ -423,12 +426,13 @@ void plist_dict_set_item(plist_t node, const char* key, plist_t item)
 
 void plist_dict_insert_item(plist_t node, const char* key, plist_t item)
 {
-    if (node && PLIST_DICT == plist_get_node_type(node))
-    {
-        node_attach((node_t *)node, (node_t *)plist_new_key(key));
-        node_attach((node_t *)node, (node_t *)item);
-    }
-    return;
+    //if (node && PLIST_DICT == plist_get_node_type(node))
+    //{
+    //    node_attach((node_t *)node, (node_t *)plist_new_key(key));
+    //    node_attach((node_t *)node, (node_t *)item);
+    //}
+    //return;
+	plist_dict_set_item(node, key, item);
 }
 
 void plist_dict_remove_item(plist_t node, const char* key)

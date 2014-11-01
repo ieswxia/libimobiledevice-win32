@@ -51,7 +51,7 @@
 
 static int add_data(struct zip *, struct zip_source *, struct zip_dirent *,
 		    FILE *);
-static int copy_data(FILE *, off_t, FILE *, struct zip_error *);
+static int copy_data(FILE *, long long, FILE *, struct zip_error *);
 static int copy_source(struct zip *, struct zip_source *, FILE *);
 static int write_cdir(struct zip *, struct zip_cdir *, FILE *);
 static int _zip_cdir_set_comment(struct zip_cdir *, struct zip *);
@@ -370,7 +370,7 @@ static int
 add_data(struct zip *za, struct zip_source *src, struct zip_dirent *de,
 	 FILE *ft)
 {
-    off_t offstart, offdata, offend;
+    long long offstart, offdata, offend;
     struct zip_stat st;
     struct zip_source *s2;
     int ret;
@@ -488,7 +488,7 @@ add_data(struct zip *za, struct zip_source *src, struct zip_dirent *de,
 
 
 static int
-copy_data(FILE *fs, off_t len, FILE *ft, struct zip_error *error)
+copy_data(FILE *fs, long long len, FILE *ft, struct zip_error *error)
 {
     char buf[BUFSIZE];
     int n, nn;
@@ -497,7 +497,7 @@ copy_data(FILE *fs, off_t len, FILE *ft, struct zip_error *error)
 	return 0;
 
     while (len > 0) {
-	nn = len > (off_t)sizeof(buf) ? sizeof(buf) : len;
+	nn = len > (long long)sizeof(buf) ? sizeof(buf) : len;
 	if ((n=fread(buf, 1, nn, fs)) < 0) {
 	    _zip_error_set(error, ZIP_ER_READ, errno);
 	    return -1;
@@ -557,7 +557,7 @@ copy_source(struct zip *za, struct zip_source *src, FILE *ft)
 static int
 write_cdir(struct zip *za, struct zip_cdir *cd, FILE *out)
 {
-    off_t offset;
+    long long offset;
     uLong crc;
     char buf[TORRENT_CRC_LEN+1];
     

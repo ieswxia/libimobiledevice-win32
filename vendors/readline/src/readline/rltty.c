@@ -924,18 +924,18 @@ rltty_set_default_bindings (kmap)
     char buf[40]; strcpy(buf,"set bell-style none");
     rl_parse_and_bind(buf);
   }
-  rl_set_key ("\\M-\\ø&", rl_get_previous_history, kmap);
-  rl_set_key ("\\M-\\ø(", rl_get_next_history, kmap);
-  rl_set_key ("\\M-\\ø'", rl_forward, kmap);
-  rl_set_key ("\\M-\\ø%", rl_backward, kmap);
+  rl_set_key ("\\M-\\?", rl_get_previous_history, kmap);
+  rl_set_key ("\\M-\\?", rl_get_next_history, kmap);
+  rl_set_key ("\\M-\\?", rl_forward, kmap);
+  rl_set_key ("\\M-\\?", rl_backward, kmap);
   
-  rl_set_key ("\\M-\\ø$", rl_beg_of_line, kmap);
-  rl_set_key ("\\M-\\ø#", rl_end_of_line, kmap);
-  rl_set_key ("\\M-\\ú%", rl_backward_word, kmap);
-  rl_set_key ("\\M-\\ú'", rl_forward_word, kmap);
+  rl_set_key ("\\M-\\?", rl_beg_of_line, kmap);
+  rl_set_key ("\\M-\\?", rl_end_of_line, kmap);
+  rl_set_key ("\\M-\\?", rl_backward_word, kmap);
+  rl_set_key ("\\M-\\?", rl_forward_word, kmap);
   
-  rl_set_key ("\\M-\\ù-", rl_paste_from_clipboard, kmap);
-  rl_set_key ("\\M-\\ø.", rl_delete, kmap);
+  rl_set_key ("\\M-\\?", rl_paste_from_clipboard, kmap);
+  rl_set_key ("\\M-\\?", rl_delete, kmap);
   rl_set_key ("", rl_unix_word_rubout, kmap);
 }
 

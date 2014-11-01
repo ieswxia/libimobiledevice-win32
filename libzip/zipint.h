@@ -48,11 +48,11 @@
 //#include "config.h"
 
 #ifndef HAVE_FSEEKO
-#define fseeko(s, o, w)	(fseek((s), (long int)(o), (w)))
+#define fseeko(s, o, w)	(_fseeki64((s), (long long)(o), (w)))
 #endif
 
 #ifndef HAVE_FTELLO
-#define ftello(s)	((long)ftell((s)))
+#define ftello(s)	((long long)_ftelli64((s)))
 #endif
 
 #ifndef HAVE_MKSTEMP
@@ -359,7 +359,7 @@ const char *_zip_error_strerror(struct zip_error *);
 int _zip_file_fillbuf(void *, size_t, struct zip_file *);
 unsigned int _zip_file_get_offset(struct zip *, int, struct zip_error *);
 
-int _zip_filerange_crc(FILE *, off_t, off_t, uLong *, struct zip_error *);
+int _zip_filerange_crc(FILE *, long long, long long, uLong *, struct zip_error *);
 
 enum zip_encoding_type _zip_guess_encoding(const char * const,
 					   zip_uint32_t);

@@ -42,7 +42,7 @@
 
 
 int
-_zip_filerange_crc(FILE *fp, off_t start, off_t len, uLong *crcp,
+_zip_filerange_crc(FILE *fp, long long start, long long len, uLong *crcp,
 		   struct zip_error *errp)
 {
     Bytef buf[BUFSIZE];

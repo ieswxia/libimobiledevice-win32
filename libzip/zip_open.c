@@ -46,13 +46,13 @@ static void set_error(int *, struct zip_error *, int);
 static struct zip *_zip_allocate_new(const char *, int, int *);
 static int _zip_checkcons(FILE *, struct zip_cdir *, struct zip_error *);
 static void _zip_check_torrentzip(struct zip *);
-static struct zip_cdir *_zip_find_central_dir(FILE *, int, int *, off_t);
+static struct zip_cdir *_zip_find_central_dir(FILE *, int, int *, long long);
 static int _zip_file_exists(const char *, int, int *);
 static int _zip_headercomp(struct zip_dirent *, int,
 			   struct zip_dirent *, int);
 static unsigned char *_zip_memmem(const unsigned char *, int,
 				  const unsigned char *, int);
-static struct zip_cdir *_zip_readcdir(FILE *, off_t, unsigned char *, unsigned char *,
+static struct zip_cdir *_zip_readcdir(FILE *, long long, unsigned char *, unsigned char *,
 				 int, int, struct zip_error *);
 
 
@@ -97,7 +97,7 @@ _zip_open(const char *fn, FILE *fp, int flags, int aflags, int *zep)
     struct zip *za;
     struct zip_cdir *cdir;
     int i;
-    off_t len;
+    long long len;
 
     if (fseeko(fp, 0, SEEK_END) < 0) {
 	*zep = ZIP_ER_SEEK;
@@ -172,7 +172,7 @@ set_error(int *zep, struct zip_error *err, int ze)
    entries, or NULL if unsuccessful. */
 
 static struct zip_cdir *
-_zip_readcdir(FILE *fp, off_t buf_offset, unsigned char *buf, unsigned char *eocd, int buflen,
+_zip_readcdir(FILE *fp, long long buf_offset, unsigned char *buf, unsigned char *eocd, int buflen,
 	      int flags, struct zip_error *error)
 {
     struct zip_cdir *cd;
@@ -512,11 +512,11 @@ _zip_file_exists(const char *fn, int flags, int *zep)
 
 
 static struct zip_cdir *
-_zip_find_central_dir(FILE *fp, int flags, int *zep, off_t len)
+_zip_find_central_dir(FILE *fp, int flags, int *zep, long long len)
 {
     struct zip_cdir *cdir, *cdirnew;
     unsigned char *buf, *match;
-    off_t buf_offset;
+    long long buf_offset;
     int a, best, buflen, i;
     struct zip_error zerr;
 
