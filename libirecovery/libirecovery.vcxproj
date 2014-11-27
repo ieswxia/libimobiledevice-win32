@@ -14,8 +14,8 @@
     <ClInclude Include="libirecovery\include\libirecovery.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="libirecovery\src\libirecovery.cpp" />
-    <ClCompile Include="libirecovery\tools\irecovery.cpp" />
+    <ClCompile Include="libirecovery\src\libirecovery.c" />
+    <ClCompile Include="libirecovery\tools\irecovery.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3AC1B24F-07D1-4574-8E1D-9D305C226D08}</ProjectGuid>
@@ -74,6 +74,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)libirecovery\include;$(SolutionDir)vendors\include;$(SolutionDir)vendors\readline\src;$(SolutionDir)getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
